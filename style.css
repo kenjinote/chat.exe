@@ -119,11 +119,15 @@ table.layout td {
     cursor: pointer;
 }
 
+.download-btn:hover {
+    cursor: pointer;
+}
+
 .download-btn:active {
     border-top: 3px solid #000000;
     border-left: 3px solid #000000;
-    border-bottom: 3px solid #ffffff;
     border-right: 3px solid #ffffff;
+    border-bottom: 3px solid #ffffff;
     padding: 11px 19px 9px 21px; /* shift text */
 }
 
