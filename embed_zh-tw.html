@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>chat.exe - 嵌入指南</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+<div class="lang-switch">
+    [ <a href="embed.html">日本語</a> | <a href="embed_en.html">English</a> | <a href="embed_zh-cn.html">简体中文</a> | <a href="embed_zh-tw.html">繁體中文</a> | <a href="embed_ko.html">한국어</a> ]
+</div>
+
+<div class="container">
+    <div class="window-title">
+        <span>chat.exe - 網站嵌入 (iframe)</span>
+        <div class="title-bar-controls">
+            <button aria-label="Minimize"></button>
+            <button aria-label="Maximize"></button>
+            <button aria-label="Close"></button>
+        </div>
+    </div>
+    
+    <div class="content">
+        <h1>將 chat.exe 嵌入您的網站！</h1>
+        
+        <p>透過使用 <code>iframe</code> 標籤，您可以輕鬆地將 chat.exe 的網頁版嵌入到您的個人網站或部落格中。<br>
+        不妨為您的訪客設置一個復古聊天室，提供一個交流的空間吧！</p>
+
+        <h2>■ 基本嵌入程式碼</h2>
+        <p>只需將以下 HTML 程式碼貼到您網站的任意位置，即可顯示聊天室。</p>
+        <pre style="background: #e0e0e0; padding: 10px; border: 1px solid #808080; overflow-x: auto;">
+&lt;iframe 
+  src="https://app.chatexe.net/?room=MySiteRoom&amp;showFrame=0&amp;lang=zh-tw" 
+  width="100%" 
+  height="500" 
+  frameborder="0"
+  allow="microphone; camera; display-capture"
+&gt;&lt;/iframe&gt;
+        </pre>
+        <p>※ 指定 <code>allow="microphone; camera; display-capture"</code> 可在 iframe 內啟用語音/視訊通話和螢幕分享功能。</p>
+
+        <h2>■ URL 參數列表</h2>
+        <p>您可以透過在 <code>src</code> 屬性的 URL 末尾附加 <code>?參數名=值</code> 的形式來客製化聊天的行為。使用 <code>&amp;</code> 連接多個參數。</p>
+        
+        <table class="layout" border="1" style="border-collapse: collapse; width: 100%; border-color: #c0c0c0;">
+            <tr style="background: #000080; color: #fff;">
+                <th>參數</th>
+                <th>預設值</th>
+                <th>說明</th>
+            </tr>
+            <tr>
+                <td><code>room</code></td>
+                <td>大廳 (Lobby)</td>
+                <td>指定初始進入的房間名。（例：<code>room=MySiteRoom</code>）</td>
+            </tr>
+            <tr>
+                <td><code>showFrame</code></td>
+                <td>1</td>
+                <td>設定為 <code>0</code> 將隱藏外部的復古視窗邊框，使其更好地融入您的網站設計。嵌入時推薦設定為 <code>0</code>。</td>
+            </tr>
+            <tr>
+                <td><code>lang</code></td>
+                <td>ja</td>
+                <td>指定顯示語言。（如：<code>ja</code>, <code>en</code>, <code>zh-cn</code>, <code>zh-tw</code>, <code>ko</code>）</td>
+            </tr>
+            <tr>
+                <td><code>showUsers</code></td>
+                <td>1</td>
+                <td>設定為 <code>0</code> 將隱藏右側的用戶列表面板。</td>
+            </tr>
+            <tr>
+                <td><code>showMoveRoom</code></td>
+                <td>1</td>
+                <td>設定為 <code>0</code> 將隱藏「移動房間」按鈕，將用戶固定在指定的房間內。</td>
+            </tr>
+            <tr>
+                <td><code>enableCamera</code></td>
+                <td>1</td>
+                <td>設定為 <code>0</code> 將停用攝影機視訊串流功能。</td>
+            </tr>
+            <tr>
+                <td><code>enableMic</code></td>
+                <td>1</td>
+                <td>設定為 <code>0</code> 將停用麥克風語音串流功能。</td>
+            </tr>
+            <tr>
+                <td><code>enableScreen</code></td>
+                <td>1</td>
+                <td>設定為 <code>0</code> 將停用螢幕分享功能。</td>
+            </tr>
+        </table>
+
+        <hr>
+        <div style="text-align: center;">
+            <a href="zh-tw.html" class="download-btn">▼ 返回官方發布頁面 ▼</a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

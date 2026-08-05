@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chat.exe - Embed Guide</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+<div class="lang-switch">
+    [ <a href="embed.html">日本語</a> | <a href="embed_en.html">English</a> | <a href="embed_zh-cn.html">简体中文</a> | <a href="embed_zh-tw.html">繁體中文</a> | <a href="embed_ko.html">한국어</a> ]
+</div>
+
+<div class="container">
+    <div class="window-title">
+        <span>chat.exe - Website Embed (iframe)</span>
+        <div class="title-bar-controls">
+            <button aria-label="Minimize"></button>
+            <button aria-label="Maximize"></button>
+            <button aria-label="Close"></button>
+        </div>
+    </div>
+    
+    <div class="content">
+        <h1>Add chat.exe to Your Website!</h1>
+        
+        <p>The web version of chat.exe can be easily embedded into your own website or blog using an <code>iframe</code> tag.<br>
+        Why not set up a retro chat room for your visitors to interact with each other?</p>
+
+        <h2>■ Basic Embed Code</h2>
+        <p>Simply copy and paste the HTML code below into your site to display the chat room.</p>
+        <pre style="background: #e0e0e0; padding: 10px; border: 1px solid #808080; overflow-x: auto;">
+&lt;iframe 
+  src="https://app.chatexe.net/?room=MySiteRoom&amp;showFrame=0&amp;lang=en" 
+  width="100%" 
+  height="500" 
+  frameborder="0"
+  allow="microphone; camera; display-capture"
+&gt;&lt;/iframe&gt;
+        </pre>
+        <p>* By specifying <code>allow="microphone; camera; display-capture"</code>, you enable audio/video calls and screen sharing within the iframe.</p>
+
+        <h2>■ URL Parameters</h2>
+        <p>You can customize the chat's behavior by appending parameters to the end of the URL in the <code>src</code> attribute in the format <code>?parameter=value</code>. Connect multiple parameters using <code>&amp;</code>.</p>
+        
+        <table class="layout" border="1" style="border-collapse: collapse; width: 100%; border-color: #c0c0c0;">
+            <tr style="background: #000080; color: #fff;">
+                <th>Parameter</th>
+                <th>Default</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td><code>room</code></td>
+                <td>Lobby</td>
+                <td>Specifies the initial room name. (e.g., <code>room=MySiteRoom</code>)</td>
+            </tr>
+            <tr>
+                <td><code>showFrame</code></td>
+                <td>1</td>
+                <td>Set to <code>0</code> to hide the outer window frame, allowing the chat to blend seamlessly into your site's design. Recommended for embedding.</td>
+            </tr>
+            <tr>
+                <td><code>lang</code></td>
+                <td>ja</td>
+                <td>Specifies the display language. (e.g., <code>ja</code>, <code>en</code>, <code>zh-cn</code>, <code>zh-tw</code>, <code>ko</code>)</td>
+            </tr>
+            <tr>
+                <td><code>showUsers</code></td>
+                <td>1</td>
+                <td>Set to <code>0</code> to hide the user list panel on the right.</td>
+            </tr>
+            <tr>
+                <td><code>showMoveRoom</code></td>
+                <td>1</td>
+                <td>Set to <code>0</code> to hide the "Move Room" button, locking users into the specified room.</td>
+            </tr>
+            <tr>
+                <td><code>enableCamera</code></td>
+                <td>1</td>
+                <td>Set to <code>0</code> to disable the camera broadcasting feature.</td>
+            </tr>
+            <tr>
+                <td><code>enableMic</code></td>
+                <td>1</td>
+                <td>Set to <code>0</code> to disable the microphone broadcasting feature.</td>
+            </tr>
+            <tr>
+                <td><code>enableScreen</code></td>
+                <td>1</td>
+                <td>Set to <code>0</code> to disable the screen sharing feature.</td>
+            </tr>
+        </table>
+
+        <hr>
+        <div style="text-align: center;">
+            <a href="en.html" class="download-btn">▼ Back to Official Website ▼</a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

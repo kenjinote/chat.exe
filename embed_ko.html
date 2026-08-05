@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>chat.exe - 삽입 가이드</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+<div class="lang-switch">
+    [ <a href="embed.html">日本語</a> | <a href="embed_en.html">English</a> | <a href="embed_zh-cn.html">简体中文</a> | <a href="embed_zh-tw.html">繁體中文</a> | <a href="embed_ko.html">한국어</a> ]
+</div>
+
+<div class="container">
+    <div class="window-title">
+        <span>chat.exe - 웹사이트 삽입 (iframe)</span>
+        <div class="title-bar-controls">
+            <button aria-label="Minimize"></button>
+            <button aria-label="Maximize"></button>
+            <button aria-label="Close"></button>
+        </div>
+    </div>
+    
+    <div class="content">
+        <h1>내 웹사이트에 chat.exe를 추가하세요!</h1>
+        
+        <p>chat.exe 웹 버전은 <code>iframe</code> 태그를 사용하여 귀하의 웹사이트나 블로그에 쉽게 삽입할 수 있습니다.<br>
+        방문자들을 위한 소통의 공간으로 레트로 채팅방을 설정해 보시는 건 어떨까요?</p>
+
+        <h2>■ 기본 삽입 코드</h2>
+        <p>아래의 HTML 코드를 웹사이트의 원하는 위치에 복사하여 붙여넣기만 하면 채팅방이 표시됩니다.</p>
+        <pre style="background: #e0e0e0; padding: 10px; border: 1px solid #808080; overflow-x: auto;">
+&lt;iframe 
+  src="https://app.chatexe.net/?room=MySiteRoom&amp;showFrame=0&amp;lang=ko" 
+  width="100%" 
+  height="500" 
+  frameborder="0"
+  allow="microphone; camera; display-capture"
+&gt;&lt;/iframe&gt;
+        </pre>
+        <p>※ <code>allow="microphone; camera; display-capture"</code>를 지정하면 iframe 내에서 음성/화상 통화 및 화면 공유가 가능해집니다.</p>
+
+        <h2>■ URL 매개변수 목록</h2>
+        <p><code>src</code> 속성의 URL 끝에 <code>?매개변수명=값</code> 형태로 옵션을 지정하여 채팅방의 동작을 사용자 지정할 수 있습니다. 여러 매개변수는 <code>&amp;</code>로 연결합니다.</p>
+        
+        <table class="layout" border="1" style="border-collapse: collapse; width: 100%; border-color: #c0c0c0;">
+            <tr style="background: #000080; color: #fff;">
+                <th>매개변수</th>
+                <th>기본값</th>
+                <th>설명</th>
+            </tr>
+            <tr>
+                <td><code>room</code></td>
+                <td>로비 (Lobby)</td>
+                <td>초기 접속할 방 이름을 지정합니다. (예: <code>room=MySiteRoom</code>)</td>
+            </tr>
+            <tr>
+                <td><code>showFrame</code></td>
+                <td>1</td>
+                <td><code>0</code>으로 설정하면 외부 창 프레임이 숨겨져 웹사이트 디자인과 자연스럽게 어우러집니다. 웹사이트 삽입 시 <code>0</code>을 권장합니다.</td>
+            </tr>
+            <tr>
+                <td><code>lang</code></td>
+                <td>ja</td>
+                <td>표시 언어를 지정합니다. (예: <code>ja</code>, <code>en</code>, <code>zh-cn</code>, <code>zh-tw</code>, <code>ko</code>)</td>
+            </tr>
+            <tr>
+                <td><code>showUsers</code></td>
+                <td>1</td>
+                <td><code>0</code>으로 설정하면 우측의 사용자 목록 패널이 숨겨집니다.</td>
+            </tr>
+            <tr>
+                <td><code>showMoveRoom</code></td>
+                <td>1</td>
+                <td><code>0</code>으로 설정하면 '방 이동' 버튼이 숨겨져 사용자를 특정 방에 고정시킬 수 있습니다.</td>
+            </tr>
+            <tr>
+                <td><code>enableCamera</code></td>
+                <td>1</td>
+                <td><code>0</code>으로 설정하면 카메라 방송 기능을 비활성화합니다.</td>
+            </tr>
+            <tr>
+                <td><code>enableMic</code></td>
+                <td>1</td>
+                <td><code>0</code>으로 설정하면 마이크 방송 기능을 비활성화합니다.</td>
+            </tr>
+            <tr>
+                <td><code>enableScreen</code></td>
+                <td>1</td>
+                <td><code>0</code>으로 설정하면 화면 공유 기능을 비활성화합니다.</td>
+            </tr>
+        </table>
+
+        <hr>
+        <div style="text-align: center;">
+            <a href="ko.html" class="download-btn">▼ 공식 배포 페이지로 돌아가기 ▼</a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
