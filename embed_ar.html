@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>chat.exe - دليل التضمين</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+<div class="lang-switch" dir="ltr">
+    [ <a href="embed.html">日本語</a> | <a href="embed_en.html">English</a> | <a href="embed_zh-cn.html">简体中文</a> | <a href="embed_zh-tw.html">繁體中文</a> | <a href="embed_ko.html">한국어</a> | <a href="embed_de.html">Deutsch</a> | <a href="embed_fr.html">Français</a> | <a href="embed_es.html">Español</a> | <a href="embed_pt.html">Português</a> | <a href="embed_ru.html">Русский</a> | <a href="embed_it.html">Italiano</a> | <a href="embed_pl.html">Polski</a> | <a href="embed_nl.html">Nederlands</a> | <a href="embed_ar.html">العربية</a> ]
+</div>
+
+<div class="container">
+    <div class="window-title">
+        <span>chat.exe - تضمين موقع الويب (iframe)</span>
+        <div class="title-bar-controls" dir="ltr">
+            <button aria-label="Minimize"></button>
+            <button aria-label="Maximize"></button>
+            <button aria-label="Close"></button>
+        </div>
+    </div>
+    
+    <div class="content">
+        <h1>أضف chat.exe إلى موقع الويب الخاص بك!</h1>
+        
+        <p>يمكن تضمين إصدار الويب من chat.exe بسهولة في موقع الويب أو المدونة الخاصة بك باستخدام علامة <code>iframe</code>.<br>
+        لماذا لا تقوم بإعداد غرفة دردشة كلاسيكية كمكان اجتماع لزوارك؟</p>
+
+        <h2>■ رمز التضمين الأساسي</h2>
+        <p>ببساطة انسخ والصق كود HTML أدناه في أي مكان على موقع الويب الخاص بك لعرض غرفة الدردشة.</p>
+        <pre style="background: #e0e0e0; padding: 10px; border: 1px solid #808080; overflow-x: auto;" dir="ltr">
+&lt;iframe 
+  src="https://app.chatexe.net/?room=MySiteRoom&amp;showFrame=0&amp;lang=ar" 
+  width="100%" 
+  height="500" 
+  frameborder="0"
+  allow="microphone; camera; display-capture"
+&gt;&lt;/iframe&gt;
+        </pre>
+        <p>* بتحديد <code>allow="microphone; camera; display-capture"</code>، يتم تمكين مكالمات الصوت/الفيديو ومشاركة الشاشة داخل إطار iframe.</p>
+
+        <h2>■ قائمة معلمات URL</h2>
+        <p>يمكنك تخصيص سلوك الدردشة عن طريق إضافة معلمات إلى نهاية عنوان URL في سمة <code>src</code>، بالتنسيق <code>?المعلمة=القيمة</code>. اربط معلمات متعددة باستخدام <code>&amp;</code>.</p>
+        
+        <table class="layout" border="1" style="border-collapse: collapse; width: 100%; border-color: #c0c0c0;">
+            <tr style="background: #000080; color: #fff;">
+                <th>المعلمة</th>
+                <th>الافتراضي</th>
+                <th>الوصف</th>
+            </tr>
+            <tr>
+                <td dir="ltr"><code>room</code></td>
+                <td dir="ltr">Lobby</td>
+                <td>يحدد اسم الغرفة الأولي. (مثال: <code dir="ltr">room=MySiteRoom</code>)</td>
+            </tr>
+            <tr>
+                <td dir="ltr"><code>private</code></td>
+                <td dir="ltr">0</td>
+                <td>إذا تم تعيينه على <code>1</code>، فلن تظهر الغرفة في "قائمة الغرف العامة"، مما يجعلها غرفة خاصة لا يمكن الوصول إليها إلا لمن يعرف اسم الغرفة.</td>
+            </tr>
+            <tr>
+                <td dir="ltr"><code>showFrame</code></td>
+                <td dir="ltr">1</td>
+                <td>إذا تم تعيينه على <code>0</code>، يتم إخفاء إطار النافذة الخارجي، مما يسمح للدردشة بالاندماج بسلاسة مع تصميم موقعك. يوصى به عند التضمين.</td>
+            </tr>
+            <tr>
+                <td dir="ltr"><code>lang</code></td>
+                <td dir="ltr">ja</td>
+                <td>يحدد لغة العرض. (مثال: <code dir="ltr">ja, en, zh-cn, zh-tw, ko, de, fr, es, pt, ru, it, pl, nl, ar</code>)</td>
+            </tr>
+            <tr>
+                <td dir="ltr"><code>showUsers</code></td>
+                <td dir="ltr">1</td>
+                <td>إذا تم تعيينه على <code>0</code>، يتم إخفاء لوحة قائمة المستخدمين على الجانب الأيمن.</td>
+            </tr>
+            <tr>
+                <td dir="ltr"><code>showMoveRoom</code></td>
+                <td dir="ltr">1</td>
+                <td>إذا تم تعيينه على <code>0</code>، يتم إخفاء زر "تغيير الغرفة"، مما يقفل المستخدمين في الغرفة المحددة.</td>
+            </tr>
+            <tr>
+                <td dir="ltr"><code>enableCamera</code></td>
+                <td dir="ltr">1</td>
+                <td>إذا تم تعيينه على <code>0</code>، يتم تعطيل ميزة بث الكاميرا.</td>
+            </tr>
+            <tr>
+                <td dir="ltr"><code>enableMic</code></td>
+                <td dir="ltr">1</td>
+                <td>إذا تم تعيينه على <code>0</code>، يتم تعطيل ميزة بث الميكروفون.</td>
+            </tr>
+            <tr>
+                <td dir="ltr"><code>enableScreen</code></td>
+                <td dir="ltr">1</td>
+                <td>إذا تم تعيينه على <code>0</code>، يتم تعطيل ميزة مشاركة الشاشة.</td>
+            </tr>
+        </table>
+
+        <hr>
+        <div style="text-align: center;">
+            <a href="ar.html" class="download-btn">▼ العودة إلى الموقع الرسمي ▼</a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
