@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>chat.exe - Przewodnik po osadzaniu</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+<div class="lang-switch">
+    [ <a href="embed.html">日本語</a> | <a href="embed_en.html">English</a> | <a href="embed_zh-cn.html">简体中文</a> | <a href="embed_zh-tw.html">繁體中文</a> | <a href="embed_ko.html">한국어</a> | <a href="embed_de.html">Deutsch</a> | <a href="embed_fr.html">Français</a> | <a href="embed_es.html">Español</a> | <a href="embed_pt.html">Português</a> | <a href="embed_ru.html">Русский</a> | <a href="embed_it.html">Italiano</a> | <a href="embed_pl.html">Polski</a> | <a href="embed_nl.html">Nederlands</a> ]
+</div>
+
+<div class="container">
+    <div class="window-title">
+        <span>chat.exe - Osadzanie na stronie (iframe)</span>
+        <div class="title-bar-controls">
+            <button aria-label="Minimize"></button>
+            <button aria-label="Maximize"></button>
+            <button aria-label="Close"></button>
+        </div>
+    </div>
+    
+    <div class="content">
+        <h1>Dodaj chat.exe do swojej strony internetowej!</h1>
+        
+        <p>Internetową wersję chat.exe można łatwo osadzić na własnej stronie lub blogu za pomocą tagu <code>iframe</code>.<br>
+        Dlaczego nie stworzyć retro pokoju rozmów jako miejsca spotkań dla odwiedzających Twoją stronę?</p>
+
+        <h2>■ Podstawowy kod do osadzania</h2>
+        <p>Po prostu skopiuj i wklej poniższy kod HTML w dowolnym miejscu na swojej stronie internetowej, aby wyświetlić pokój rozmów.</p>
+        <pre style="background: #e0e0e0; padding: 10px; border: 1px solid #808080; overflow-x: auto;">
+&lt;iframe 
+  src="https://app.chatexe.net/?room=MySiteRoom&amp;showFrame=0&amp;lang=pl" 
+  width="100%" 
+  height="500" 
+  frameborder="0"
+  allow="microphone; camera; display-capture"
+&gt;&lt;/iframe&gt;
+        </pre>
+        <p>* Dodając <code>allow="microphone; camera; display-capture"</code>, włączasz rozmowy audio/wideo i udostępnianie ekranu wewnątrz elementu iframe.</p>
+
+        <h2>■ Lista parametrów URL</h2>
+        <p>Możesz dostosować zachowanie czatu, dodając parametry na końcu adresu URL w atrybucie <code>src</code> w formacie <code>?parametr=wartość</code>. Połącz wiele parametrów używając <code>&amp;</code>.</p>
+        
+        <table class="layout" border="1" style="border-collapse: collapse; width: 100%; border-color: #c0c0c0;">
+            <tr style="background: #000080; color: #fff;">
+                <th>Parametr</th>
+                <th>Domyślnie</th>
+                <th>Opis</th>
+            </tr>
+            <tr>
+                <td><code>room</code></td>
+                <td>Lobby</td>
+                <td>Określa początkową nazwę pokoju. (np., <code>room=MySiteRoom</code>)</td>
+            </tr>
+            <tr>
+                <td><code>private</code></td>
+                <td>0</td>
+                <td>Jeśli ustawione na <code>1</code>, pokój nie pojawi się na "Liście publicznych pokojów", stając się prywatnym pokojem dostępnym tylko dla tych, którzy znają jego nazwę.</td>
+            </tr>
+            <tr>
+                <td><code>showFrame</code></td>
+                <td>1</td>
+                <td>Jeśli ustawione na <code>0</code>, zewnętrzna ramka okna jest ukryta, co pozwala na płynne zintegrowanie czatu z projektem Twojej strony. Zalecane przy osadzaniu.</td>
+            </tr>
+            <tr>
+                <td><code>lang</code></td>
+                <td>ja</td>
+                <td>Określa język wyświetlania. (np., <code>ja</code>, <code>en</code>, <code>zh-cn</code>, <code>zh-tw</code>, <code>ko</code>, <code>de</code>, <code>fr</code>, <code>es</code>, <code>pt</code>, <code>ru</code>, <code>it</code>, <code>pl</code>)</td>
+            </tr>
+            <tr>
+                <td><code>showUsers</code></td>
+                <td>1</td>
+                <td>Jeśli ustawione na <code>0</code>, panel listy użytkowników po prawej stronie jest ukryty.</td>
+            </tr>
+            <tr>
+                <td><code>showMoveRoom</code></td>
+                <td>1</td>
+                <td>Jeśli ustawione na <code>0</code>, przycisk "Zmień pokój" jest ukryty, blokując użytkowników w określonym pokoju.</td>
+            </tr>
+            <tr>
+                <td><code>enableCamera</code></td>
+                <td>1</td>
+                <td>Jeśli ustawione na <code>0</code>, funkcja transmisji z kamery jest wyłączona.</td>
+            </tr>
+            <tr>
+                <td><code>enableMic</code></td>
+                <td>1</td>
+                <td>Jeśli ustawione na <code>0</code>, funkcja transmisji z mikrofonu jest wyłączona.</td>
+            </tr>
+            <tr>
+                <td><code>enableScreen</code></td>
+                <td>1</td>
+                <td>Jeśli ustawione na <code>0</code>, funkcja udostępniania ekranu jest wyłączona.</td>
+            </tr>
+        </table>
+
+        <hr>
+        <div style="text-align: center;">
+            <a href="pl.html" class="download-btn">▼ Powrót na oficjalzną stronę ▼</a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

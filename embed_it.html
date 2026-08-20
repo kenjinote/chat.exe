@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>chat.exe - Guida all'incorporamento</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+<div class="lang-switch">
+    [ <a href="embed.html">日本語</a> | <a href="embed_en.html">English</a> | <a href="embed_zh-cn.html">简体中文</a> | <a href="embed_zh-tw.html">繁體中文</a> | <a href="embed_ko.html">한국어</a> | <a href="embed_de.html">Deutsch</a> | <a href="embed_fr.html">Français</a> | <a href="embed_es.html">Español</a> | <a href="embed_pt.html">Português</a> | <a href="embed_ru.html">Русский</a> | <a href="embed_it.html">Italiano</a> | <a href="embed_pl.html">Polski</a> | <a href="embed_nl.html">Nederlands</a> ]
+</div>
+
+<div class="container">
+    <div class="window-title">
+        <span>chat.exe - Incorporamento sito web (iframe)</span>
+        <div class="title-bar-controls">
+            <button aria-label="Minimize"></button>
+            <button aria-label="Maximize"></button>
+            <button aria-label="Close"></button>
+        </div>
+    </div>
+    
+    <div class="content">
+        <h1>Aggiungi chat.exe al tuo sito web!</h1>
+        
+        <p>La versione web di chat.exe può essere facilmente incorporata nel tuo sito web o blog utilizzando un tag <code>iframe</code>.<br>
+        Perché non allestire una chat room retrò come luogo di incontro per i tuoi visitatori?</p>
+
+        <h2>■ Codice di incorporamento di base</h2>
+        <p>Copia e incolla semplicemente il codice HTML sottostante in qualsiasi punto del tuo sito per visualizzare la chat room.</p>
+        <pre style="background: #e0e0e0; padding: 10px; border: 1px solid #808080; overflow-x: auto;">
+&lt;iframe 
+  src="https://app.chatexe.net/?room=MySiteRoom&amp;showFrame=0&amp;lang=it" 
+  width="100%" 
+  height="500" 
+  frameborder="0"
+  allow="microphone; camera; display-capture"
+&gt;&lt;/iframe&gt;
+        </pre>
+        <p>* Specificando <code>allow="microphone; camera; display-capture"</code>, vengono abilitate le chiamate audio/video e la condivisione dello schermo all'interno dell'iframe.</p>
+
+        <h2>■ Elenco dei parametri URL</h2>
+        <p>Puoi personalizzare il comportamento della chat aggiungendo dei parametri alla fine dell'URL nell'attributo <code>src</code>, nel formato <code>?parametro=valore</code>. Collega più parametri usando <code>&amp;</code>.</p>
+        
+        <table class="layout" border="1" style="border-collapse: collapse; width: 100%; border-color: #c0c0c0;">
+            <tr style="background: #000080; color: #fff;">
+                <th>Parametro</th>
+                <th>Predefinito</th>
+                <th>Descrizione</th>
+            </tr>
+            <tr>
+                <td><code>room</code></td>
+                <td>Lobby</td>
+                <td>Specifica il nome iniziale della stanza. (es., <code>room=MySiteRoom</code>)</td>
+            </tr>
+            <tr>
+                <td><code>private</code></td>
+                <td>0</td>
+                <td>Se impostato su <code>1</code>, la stanza non apparirà nella "Lista delle stanze pubbliche", rendendola una stanza privata accessibile solo a chi conosce il nome della stanza.</td>
+            </tr>
+            <tr>
+                <td><code>showFrame</code></td>
+                <td>1</td>
+                <td>Se impostato su <code>0</code>, la cornice esterna della finestra viene nascosta, permettendo alla chat di integrarsi perfettamente con il design del tuo sito. Consigliato per l'incorporamento.</td>
+            </tr>
+            <tr>
+                <td><code>lang</code></td>
+                <td>ja</td>
+                <td>Specifica la lingua di visualizzazione. (es., <code>ja</code>, <code>en</code>, <code>zh-cn</code>, <code>zh-tw</code>, <code>ko</code>, <code>de</code>, <code>fr</code>, <code>es</code>, <code>pt</code>, <code>ru</code>, <code>it</code>)</td>
+            </tr>
+            <tr>
+                <td><code>showUsers</code></td>
+                <td>1</td>
+                <td>Se impostato su <code>0</code>, il pannello dell'elenco utenti sul lato destro viene nascosto.</td>
+            </tr>
+            <tr>
+                <td><code>showMoveRoom</code></td>
+                <td>1</td>
+                <td>Se impostato su <code>0</code>, il pulsante "Cambia stanza" viene nascosto, bloccando gli utenti nella stanza specificata.</td>
+            </tr>
+            <tr>
+                <td><code>enableCamera</code></td>
+                <td>1</td>
+                <td>Se impostato su <code>0</code>, la funzione di trasmissione della videocamera viene disattivata.</td>
+            </tr>
+            <tr>
+                <td><code>enableMic</code></td>
+                <td>1</td>
+                <td>Se impostato su <code>0</code>, la funzione di trasmissione del microfono viene disattivata.</td>
+            </tr>
+            <tr>
+                <td><code>enableScreen</code></td>
+                <td>1</td>
+                <td>Se impostato su <code>0</code>, la funzione di condivisione dello schermo viene disattivata.</td>
+            </tr>
+        </table>
+
+        <hr>
+        <div style="text-align: center;">
+            <a href="it.html" class="download-btn">▼ Torna al sito ufficiale ▼</a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

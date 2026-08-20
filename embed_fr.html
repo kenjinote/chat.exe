@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>chat.exe - Guide d'intégration</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+<div class="lang-switch">
+    [ <a href="embed.html">日本語</a> | <a href="embed_en.html">English</a> | <a href="embed_zh-cn.html">简体中文</a> | <a href="embed_zh-tw.html">繁體中文</a> | <a href="embed_ko.html">한국어</a> | <a href="embed_de.html">Deutsch</a> | <a href="embed_fr.html">Français</a> | <a href="embed_es.html">Español</a> | <a href="embed_pt.html">Português</a> | <a href="embed_ru.html">Русский</a> | <a href="embed_it.html">Italiano</a> | <a href="embed_pl.html">Polski</a> | <a href="embed_nl.html">Nederlands</a> ]
+</div>
+
+<div class="container">
+    <div class="window-title">
+        <span>chat.exe - Intégration site Web (iframe)</span>
+        <div class="title-bar-controls">
+            <button aria-label="Minimize"></button>
+            <button aria-label="Maximize"></button>
+            <button aria-label="Close"></button>
+        </div>
+    </div>
+    
+    <div class="content">
+        <h1>Ajoutez chat.exe à votre site Web !</h1>
+        
+        <p>La version Web de chat.exe peut être facilement intégrée à votre propre site Web ou blog à l'aide d'une balise <code>iframe</code>.<br>
+        Pourquoi ne pas installer un salon de discussion rétro pour que vos visiteurs interagissent entre eux ?</p>
+
+        <h2>■ Code d'intégration de base</h2>
+        <p>Copiez et collez simplement le code HTML ci-dessous n'importe où sur votre site pour afficher le salon de discussion.</p>
+        <pre style="background: #e0e0e0; padding: 10px; border: 1px solid #808080; overflow-x: auto;">
+&lt;iframe 
+  src="https://app.chatexe.net/?room=MySiteRoom&amp;showFrame=0&amp;lang=fr" 
+  width="100%" 
+  height="500" 
+  frameborder="0"
+  allow="microphone; camera; display-capture"
+&gt;&lt;/iframe&gt;
+        </pre>
+        <p>* En spécifiant <code>allow="microphone; camera; display-capture"</code>, vous activez les appels audio/vidéo et le partage d'écran dans l'iframe.</p>
+
+        <h2>■ Liste des paramètres URL</h2>
+        <p>Vous pouvez personnaliser le comportement du chat en ajoutant des paramètres à la fin de l'URL dans l'attribut <code>src</code> sous le format <code>?paramètre=valeur</code>. Connectez plusieurs paramètres en utilisant <code>&amp;</code>.</p>
+        
+        <table class="layout" border="1" style="border-collapse: collapse; width: 100%; border-color: #c0c0c0;">
+            <tr style="background: #000080; color: #fff;">
+                <th>Paramètre</th>
+                <th>Défaut</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td><code>room</code></td>
+                <td>Lobby</td>
+                <td>Spécifie le nom initial du salon. (ex : <code>room=MySiteRoom</code>)</td>
+            </tr>
+            <tr>
+                <td><code>private</code></td>
+                <td>0</td>
+                <td>Défini sur <code>1</code>, le salon ne sera pas affiché dans la "Liste des salons publics", ce qui en fait un salon privé accessible uniquement à ceux qui connaissent le nom du salon.</td>
+            </tr>
+            <tr>
+                <td><code>showFrame</code></td>
+                <td>1</td>
+                <td>Défini sur <code>0</code>, le cadre extérieur de la fenêtre est masqué, ce qui permet au chat de se fondre parfaitement dans le design de votre site. Recommandé pour l'intégration.</td>
+            </tr>
+            <tr>
+                <td><code>lang</code></td>
+                <td>ja</td>
+                <td>Spécifie la langue d'affichage. (ex : <code>ja</code>, <code>en</code>, <code>zh-cn</code>, <code>zh-tw</code>, <code>ko</code>, <code>de</code>, <code>fr</code>)</td>
+            </tr>
+            <tr>
+                <td><code>showUsers</code></td>
+                <td>1</td>
+                <td>Défini sur <code>0</code>, le panneau de la liste des utilisateurs sur le côté droit est masqué.</td>
+            </tr>
+            <tr>
+                <td><code>showMoveRoom</code></td>
+                <td>1</td>
+                <td>Défini sur <code>0</code>, le bouton "Changer de salon" est masqué, bloquant les utilisateurs dans le salon spécifié.</td>
+            </tr>
+            <tr>
+                <td><code>enableCamera</code></td>
+                <td>1</td>
+                <td>Défini sur <code>0</code>, la fonction de diffusion de la caméra est désactivée.</td>
+            </tr>
+            <tr>
+                <td><code>enableMic</code></td>
+                <td>1</td>
+                <td>Défini sur <code>0</code>, la fonction de diffusion du microphone est désactivée.</td>
+            </tr>
+            <tr>
+                <td><code>enableScreen</code></td>
+                <td>1</td>
+                <td>Défini sur <code>0</code>, la fonction de partage d'écran est désactivée.</td>
+            </tr>
+        </table>
+
+        <hr>
+        <div style="text-align: center;">
+            <a href="fr.html" class="download-btn">▼ Retour au site officiel ▼</a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

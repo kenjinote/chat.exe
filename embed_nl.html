@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>chat.exe - Insluitgids</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+<div class="lang-switch">
+    [ <a href="embed.html">日本語</a> | <a href="embed_en.html">English</a> | <a href="embed_zh-cn.html">简体中文</a> | <a href="embed_zh-tw.html">繁體中文</a> | <a href="embed_ko.html">한국어</a> | <a href="embed_de.html">Deutsch</a> | <a href="embed_fr.html">Français</a> | <a href="embed_es.html">Español</a> | <a href="embed_pt.html">Português</a> | <a href="embed_ru.html">Русский</a> | <a href="embed_it.html">Italiano</a> | <a href="embed_pl.html">Polski</a> | <a href="embed_nl.html">Nederlands</a> ]
+</div>
+
+<div class="container">
+    <div class="window-title">
+        <span>chat.exe - Website Insluiten (iframe)</span>
+        <div class="title-bar-controls">
+            <button aria-label="Minimize"></button>
+            <button aria-label="Maximize"></button>
+            <button aria-label="Close"></button>
+        </div>
+    </div>
+    
+    <div class="content">
+        <h1>Voeg chat.exe toe aan uw website!</h1>
+        
+        <p>De webversie van chat.exe kan eenvoudig in uw eigen website of blog worden ingesloten met behulp van een <code>iframe</code>-tag.<br>
+        Waarom zet u niet een retro-chatroom op als ontmoetingsplaats voor uw bezoekers?</p>
+
+        <h2>■ Basis insluitcode</h2>
+        <p>Kopieer en plak eenvoudigweg de onderstaande HTML-code ergens op uw website om de chatroom weer te geven.</p>
+        <pre style="background: #e0e0e0; padding: 10px; border: 1px solid #808080; overflow-x: auto;">
+&lt;iframe 
+  src="https://app.chatexe.net/?room=MijnSiteKamer&amp;showFrame=0&amp;lang=nl" 
+  width="100%" 
+  height="500" 
+  frameborder="0"
+  allow="microphone; camera; display-capture"
+&gt;&lt;/iframe&gt;
+        </pre>
+        <p>* Door <code>allow="microphone; camera; display-capture"</code> op te geven, worden audio-/videogesprekken en scherm delen binnen het iframe ingeschakeld.</p>
+
+        <h2>■ Lijst met URL-parameters</h2>
+        <p>U kunt het gedrag van de chat aanpassen door parameters toe te voegen aan het einde van de URL in het <code>src</code>-attribuut, in het formaat <code>?parameter=waarde</code>. Koppel meerdere parameters met behulp van <code>&amp;</code>.</p>
+        
+        <table class="layout" border="1" style="border-collapse: collapse; width: 100%; border-color: #c0c0c0;">
+            <tr style="background: #000080; color: #fff;">
+                <th>Parameter</th>
+                <th>Standaard</th>
+                <th>Beschrijving</th>
+            </tr>
+            <tr>
+                <td><code>room</code></td>
+                <td>Lobby</td>
+                <td>Specificeert de initiële kamernaam. (bijv., <code>room=MijnSiteKamer</code>)</td>
+            </tr>
+            <tr>
+                <td><code>private</code></td>
+                <td>0</td>
+                <td>Indien ingesteld op <code>1</code>, verschijnt de kamer niet in de "Lijst met openbare kamers", waardoor het een privéruimte wordt die alleen toegankelijk is voor degenen die de kamernaam kennen.</td>
+            </tr>
+            <tr>
+                <td><code>showFrame</code></td>
+                <td>1</td>
+                <td>Indien ingesteld op <code>0</code>, wordt het buitenste vensterkader verborgen, waardoor de chat naadloos kan integreren met het ontwerp van uw site. Aanbevolen bij het insluiten.</td>
+            </tr>
+            <tr>
+                <td><code>lang</code></td>
+                <td>ja</td>
+                <td>Specificeert de weergavetaal. (bijv., <code>ja</code>, <code>en</code>, <code>zh-cn</code>, <code>zh-tw</code>, <code>ko</code>, <code>de</code>, <code>fr</code>, <code>es</code>, <code>pt</code>, <code>ru</code>, <code>it</code>, <code>pl</code>, <code>nl</code>)</td>
+            </tr>
+            <tr>
+                <td><code>showUsers</code></td>
+                <td>1</td>
+                <td>Indien ingesteld op <code>0</code>, wordt het gebruikerslijstpaneel aan de rechterkant verborgen.</td>
+            </tr>
+            <tr>
+                <td><code>showMoveRoom</code></td>
+                <td>1</td>
+                <td>Indien ingesteld op <code>0</code>, wordt de knop "Kamer wijzigen" verborgen, waardoor gebruikers in de opgegeven kamer worden vastgezet.</td>
+            </tr>
+            <tr>
+                <td><code>enableCamera</code></td>
+                <td>1</td>
+                <td>Indien ingesteld op <code>0</code>, wordt de camera-uitzendfunctie uitgeschakeld.</td>
+            </tr>
+            <tr>
+                <td><code>enableMic</code></td>
+                <td>1</td>
+                <td>Indien ingesteld op <code>0</code>, wordt de microfoon-uitzendfunctie uitgeschakeld.</td>
+            </tr>
+            <tr>
+                <td><code>enableScreen</code></td>
+                <td>1</td>
+                <td>Indien ingesteld op <code>0</code>, wordt de functie voor het delen van schermen uitgeschakeld.</td>
+            </tr>
+        </table>
+
+        <hr>
+        <div style="text-align: center;">
+            <a href="nl.html" class="download-btn">▼ Terug naar de officiële site ▼</a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

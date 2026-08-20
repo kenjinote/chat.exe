@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>chat.exe - Руководство по встраиванию</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+<div class="lang-switch">
+    [ <a href="embed.html">日本語</a> | <a href="embed_en.html">English</a> | <a href="embed_zh-cn.html">简体中文</a> | <a href="embed_zh-tw.html">繁體中文</a> | <a href="embed_ko.html">한국어</a> | <a href="embed_de.html">Deutsch</a> | <a href="embed_fr.html">Français</a> | <a href="embed_es.html">Español</a> | <a href="embed_pt.html">Português</a> | <a href="embed_ru.html">Русский</a> | <a href="embed_it.html">Italiano</a> | <a href="embed_pl.html">Polski</a> | <a href="embed_nl.html">Nederlands</a> ]
+</div>
+
+<div class="container">
+    <div class="window-title">
+        <span>chat.exe - Встраивание на сайт (iframe)</span>
+        <div class="title-bar-controls">
+            <button aria-label="Minimize"></button>
+            <button aria-label="Maximize"></button>
+            <button aria-label="Close"></button>
+        </div>
+    </div>
+    
+    <div class="content">
+        <h1>Добавьте chat.exe на свой сайт!</h1>
+        
+        <p>Веб-версию chat.exe можно легко встроить на ваш собственный веб-сайт или блог с помощью тега <code>iframe</code>.<br>
+        Почему бы не создать ретро-чат как место встречи для ваших посетителей?</p>
+
+        <h2>■ Базовый код для встраивания</h2>
+        <p>Просто скопируйте и вставьте приведенный ниже HTML-код в любое место на вашем сайте, чтобы отобразить чат.</p>
+        <pre style="background: #e0e0e0; padding: 10px; border: 1px solid #808080; overflow-x: auto;">
+&lt;iframe 
+  src="https://app.chatexe.net/?room=MySiteRoom&amp;showFrame=0&amp;lang=ru" 
+  width="100%" 
+  height="500" 
+  frameborder="0"
+  allow="microphone; camera; display-capture"
+&gt;&lt;/iframe&gt;
+        </pre>
+        <p>* Указав <code>allow="microphone; camera; display-capture"</code>, вы разрешите аудио/видео звонки и демонстрацию экрана внутри iframe.</p>
+
+        <h2>■ Список URL-параметров</h2>
+        <p>Вы можете настроить поведение чата, добавив параметры в конец URL-адреса в атрибуте <code>src</code> в формате <code>?параметр=значение</code>. Соединяйте несколько параметров с помощью <code>&amp;</code>.</p>
+        
+        <table class="layout" border="1" style="border-collapse: collapse; width: 100%; border-color: #c0c0c0;">
+            <tr style="background: #000080; color: #fff;">
+                <th>Параметр</th>
+                <th>По умолчанию</th>
+                <th>Описание</th>
+            </tr>
+            <tr>
+                <td><code>room</code></td>
+                <td>Lobby</td>
+                <td>Указывает начальное название комнаты. (например, <code>room=MySiteRoom</code>)</td>
+            </tr>
+            <tr>
+                <td><code>private</code></td>
+                <td>0</td>
+                <td>Если установлено значение <code>1</code>, комната не будет отображаться в «Списке публичных комнат», что сделает ее приватной комнатой, доступной только тем, кто знает ее название.</td>
+            </tr>
+            <tr>
+                <td><code>showFrame</code></td>
+                <td>1</td>
+                <td>Если установлено значение <code>0</code>, внешняя рамка окна скрывается, что позволяет чату легко вписаться в дизайн вашего сайта. Рекомендуется для встраивания.</td>
+            </tr>
+            <tr>
+                <td><code>lang</code></td>
+                <td>ja</td>
+                <td>Указывает язык интерфейса. (например, <code>ja</code>, <code>en</code>, <code>zh-cn</code>, <code>zh-tw</code>, <code>ko</code>, <code>de</code>, <code>fr</code>, <code>es</code>, <code>pt</code>, <code>ru</code>)</td>
+            </tr>
+            <tr>
+                <td><code>showUsers</code></td>
+                <td>1</td>
+                <td>Если установлено значение <code>0</code>, панель списка пользователей с правой стороны скрывается.</td>
+            </tr>
+            <tr>
+                <td><code>showMoveRoom</code></td>
+                <td>1</td>
+                <td>Если установлено значение <code>0</code>, кнопка «Сменить комнату» скрывается, блокируя пользователей в указанной комнате.</td>
+            </tr>
+            <tr>
+                <td><code>enableCamera</code></td>
+                <td>1</td>
+                <td>Если установлено значение <code>0</code>, функция трансляции с камеры отключается.</td>
+            </tr>
+            <tr>
+                <td><code>enableMic</code></td>
+                <td>1</td>
+                <td>Если установлено значение <code>0</code>, функция трансляции с микрофона отключается.</td>
+            </tr>
+            <tr>
+                <td><code>enableScreen</code></td>
+                <td>1</td>
+                <td>Если установлено значение <code>0</code>, функция демонстрации экрана отключается.</td>
+            </tr>
+        </table>
+
+        <hr>
+        <div style="text-align: center;">
+            <a href="ru.html" class="download-btn">▼ Вернуться на официальный сайт ▼</a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
