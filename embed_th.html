@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>chat.exe - คู่มือการฝัง</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+<div class="lang-switch" dir="ltr">
+    [ <a href="embed.html">日本語</a> | <a href="embed_en.html">English</a> | <a href="embed_zh-cn.html">简体中文</a> | <a href="embed_zh-tw.html">繁體中文</a> | <a href="embed_ko.html">한국어</a> | <a href="embed_de.html">Deutsch</a> | <a href="embed_fr.html">Français</a> | <a href="embed_es.html">Español</a> | <a href="embed_pt.html">Português</a> | <a href="embed_ru.html">Русский</a> | <a href="embed_it.html">Italiano</a> | <a href="embed_pl.html">Polski</a> | <a href="embed_nl.html">Nederlands</a> | <a href="embed_ar.html">العربية</a> | <a href="embed_th.html">ภาษาไทย</a> | <a href="embed_hi.html">हिन्दी</a> | <a href="embed_bn.html">বাংলা</a> | <a href="embed_id.html">Bahasa Indonesia</a> ]
+</div>
+
+<div class="container">
+    <div class="window-title">
+        <span>chat.exe - การฝังเว็บไซต์ (iframe)</span>
+        <div class="title-bar-controls">
+            <button aria-label="Minimize"></button>
+            <button aria-label="Maximize"></button>
+            <button aria-label="Close"></button>
+        </div>
+    </div>
+    
+    <div class="content">
+        <h1>เพิ่ม chat.exe ลงในเว็บไซต์ของคุณ!</h1>
+        
+        <p>เวอร์ชันเว็บของ chat.exe สามารถฝังลงในเว็บไซต์หรือบล็อกของคุณได้อย่างง่ายดายโดยใช้แท็ก <code>iframe</code><br>
+        ทำไมไม่ลองตั้งค่าห้องแชทย้อนยุคเป็นสถานที่พบปะสำหรับผู้เยี่ยมชมของคุณล่ะ?</p>
+
+        <h2>■ รหัสฝังพื้นฐาน</h2>
+        <p>เพียงคัดลอกและวางโค้ด HTML ด้านล่างที่ใดก็ได้บนเว็บไซต์ของคุณเพื่อแสดงห้องแชท</p>
+        <pre style="background: #e0e0e0; padding: 10px; border: 1px solid #808080; overflow-x: auto;">
+&lt;iframe 
+  src="https://app.chatexe.net/?room=MySiteRoom&amp;showFrame=0&amp;lang=th" 
+  width="100%" 
+  height="500" 
+  frameborder="0"
+  allow="microphone; camera; display-capture"
+&gt;&lt;/iframe&gt;
+        </pre>
+        <p>* การระบุ <code>allow="microphone; camera; display-capture"</code> จะเป็นการเปิดใช้งานการโทรด้วยเสียง/วิดีโอและการแชร์หน้าจอภายใน iframe</p>
+
+        <h2>■ รายการพารามิเตอร์ URL</h2>
+        <p>คุณสามารถปรับแต่งพฤติกรรมของแชทได้โดยเพิ่มพารามิเตอร์ต่อท้าย URL ในแอตทริบิวต์ <code>src</code> ในรูปแบบ <code>?พารามิเตอร์=ค่า</code> เชื่อมโยงหลายพารามิเตอร์โดยใช้ <code>&amp;</code></p>
+        
+        <table class="layout" border="1" style="border-collapse: collapse; width: 100%; border-color: #c0c0c0;">
+            <tr style="background: #000080; color: #fff;">
+                <th>พารามิเตอร์</th>
+                <th>ค่าเริ่มต้น</th>
+                <th>คำอธิบาย</th>
+            </tr>
+            <tr>
+                <td><code>room</code></td>
+                <td>Lobby</td>
+                <td>ระบุชื่อห้องเริ่มต้น (เช่น <code>room=MySiteRoom</code>)</td>
+            </tr>
+            <tr>
+                <td><code>private</code></td>
+                <td>0</td>
+                <td>หากตั้งค่าเป็น <code>1</code> ห้องจะไม่ปรากฏใน "รายการห้องสาธารณะ" ทำให้เป็นห้องส่วนตัวที่เข้าถึงได้เฉพาะผู้ที่รู้ชื่อห้องเท่านั้น</td>
+            </tr>
+            <tr>
+                <td><code>showFrame</code></td>
+                <td>1</td>
+                <td>หากตั้งค่าเป็น <code>0</code> กรอบหน้าต่างด้านนอกจะถูกซ่อนไว้ ช่วยให้แชทผสานเข้ากับการออกแบบเว็บไซต์ของคุณได้อย่างกลมกลืน แนะนำเมื่อทำการฝัง</td>
+            </tr>
+            <tr>
+                <td><code>lang</code></td>
+                <td>ja</td>
+                <td>ระบุภาษาที่แสดง (เช่น <code>ja, en, zh-cn, zh-tw, ko, de, fr, es, pt, ru, it, pl, nl, ar, th</code>)</td>
+            </tr>
+            <tr>
+                <td><code>showUsers</code></td>
+                <td>1</td>
+                <td>หากตั้งค่าเป็น <code>0</code> แผงรายชื่อผู้ใช้ทางด้านขวาจะถูกซ่อนไว้</td>
+            </tr>
+            <tr>
+                <td><code>showMoveRoom</code></td>
+                <td>1</td>
+                <td>หากตั้งค่าเป็น <code>0</code> ปุ่ม "เปลี่ยนห้อง" จะถูกซ่อนไว้ ทำให้ผู้ใช้ถูกล็อกอยู่ในห้องที่ระบุ</td>
+            </tr>
+            <tr>
+                <td><code>enableCamera</code></td>
+                <td>1</td>
+                <td>หากตั้งค่าเป็น <code>0</code> ฟีเจอร์การแพร่ภาพจากกล้องจะถูกปิดใช้งาน</td>
+            </tr>
+            <tr>
+                <td><code>enableMic</code></td>
+                <td>1</td>
+                <td>หากตั้งค่าเป็น <code>0</code> ฟีเจอร์การแพร่ภาพจากไมโครโฟนจะถูกปิดใช้งาน</td>
+            </tr>
+            <tr>
+                <td><code>enableScreen</code></td>
+                <td>1</td>
+                <td>หากตั้งค่าเป็น <code>0</code> ฟีเจอร์การแชร์หน้าจอจะถูกปิดใช้งาน</td>
+            </tr>
+        </table>
+
+        <hr>
+        <div style="text-align: center;">
+            <a href="th.html" class="download-btn">▼ กลับไปที่เว็บไซต์อย่างเป็นทางการ ▼</a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

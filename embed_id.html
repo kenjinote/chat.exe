@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>chat.exe - Panduan Penyematan</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+<div class="lang-switch" dir="ltr">
+    [ <a href="embed.html">日本語</a> | <a href="embed_en.html">English</a> | <a href="embed_zh-cn.html">简体中文</a> | <a href="embed_zh-tw.html">繁體中文</a> | <a href="embed_ko.html">한국어</a> | <a href="embed_de.html">Deutsch</a> | <a href="embed_fr.html">Français</a> | <a href="embed_es.html">Español</a> | <a href="embed_pt.html">Português</a> | <a href="embed_ru.html">Русский</a> | <a href="embed_it.html">Italiano</a> | <a href="embed_pl.html">Polski</a> | <a href="embed_nl.html">Nederlands</a> | <a href="embed_ar.html">العربية</a> | <a href="embed_th.html">ภาษาไทย</a> | <a href="embed_hi.html">हिन्दी</a> | <a href="embed_bn.html">বাংলা</a> | <a href="embed_id.html">Bahasa Indonesia</a> ]
+</div>
+
+<div class="container">
+    <div class="window-title">
+        <span>chat.exe - Situs Web Semat (iframe)</span>
+        <div class="title-bar-controls">
+            <button aria-label="Minimize"></button>
+            <button aria-label="Maximize"></button>
+            <button aria-label="Close"></button>
+        </div>
+    </div>
+    
+    <div class="content">
+        <h1>Tambahkan chat.exe ke Situs Web Anda!</h1>
+        
+        <p>Versi web dari chat.exe dapat dengan mudah disematkan ke situs web atau blog Anda menggunakan tag <code>iframe</code>.<br>
+        Mengapa tidak mengatur ruang obrolan retro sebagai tempat berkumpul untuk pengunjung Anda?</p>
+
+        <h2>■ Kode Semat Dasar</h2>
+        <p>Cukup salin dan tempel kode HTML di bawah ini di mana saja di situs web Anda untuk menampilkan ruang obrolan.</p>
+        <pre style="background: #e0e0e0; padding: 10px; border: 1px solid #808080; overflow-x: auto;">
+&lt;iframe 
+  src="https://app.chatexe.net/?room=MySiteRoom&amp;showFrame=0&amp;lang=id" 
+  width="100%" 
+  height="500" 
+  frameborder="0"
+  allow="microphone; camera; display-capture"
+&gt;&lt;/iframe&gt;
+        </pre>
+        <p>* Menentukan <code>allow="microphone; camera; display-capture"</code> memungkinkan panggilan suara/video dan berbagi layar di dalam iframe.</p>
+
+        <h2>■ Daftar Parameter URL</h2>
+        <p>Anda dapat menyesuaikan perilaku obrolan dengan menambahkan parameter ke URL dalam atribut <code>src</code> menggunakan format <code>?parameter=value</code>. Gabungkan beberapa parameter menggunakan <code>&amp;</code>.</p>
+        
+        <table class="layout" border="1" style="border-collapse: collapse; width: 100%; border-color: #c0c0c0;">
+            <tr style="background: #000080; color: #fff;">
+                <th>Parameter</th>
+                <th>Bawaan</th>
+                <th>Deskripsi</th>
+            </tr>
+            <tr>
+                <td><code>room</code></td>
+                <td>Lobby</td>
+                <td>Tentukan nama ruang awal (mis. <code>room=MySiteRoom</code>)</td>
+            </tr>
+            <tr>
+                <td><code>private</code></td>
+                <td>0</td>
+                <td>Jika diatur ke <code>1</code>, ruang tidak akan muncul di "Daftar Ruang Publik", menjadikannya ruang pribadi yang hanya dapat diakses oleh mereka yang mengetahui nama ruang tersebut.</td>
+            </tr>
+            <tr>
+                <td><code>showFrame</code></td>
+                <td>1</td>
+                <td>Jika diatur ke <code>0</code>, bingkai jendela luar akan disembunyikan, memungkinkan obrolan berpadu mulus dengan desain situs web Anda. Disarankan saat menyematkan.</td>
+            </tr>
+            <tr>
+                <td><code>lang</code></td>
+                <td>ja</td>
+                <td>Tentukan bahasa tampilan (mis. <code>ja, en, zh-cn, zh-tw, ko, de, fr, es, pt, ru, it, pl, nl, ar, th, hi, bn, id</code>)</td>
+            </tr>
+            <tr>
+                <td><code>showUsers</code></td>
+                <td>1</td>
+                <td>Jika diatur ke <code>0</code>, panel daftar pengguna di sebelah kanan akan disembunyikan.</td>
+            </tr>
+            <tr>
+                <td><code>showMoveRoom</code></td>
+                <td>1</td>
+                <td>Jika diatur ke <code>0</code>, tombol "Ganti Ruang" akan disembunyikan, mengunci pengguna di ruang yang ditentukan.</td>
+            </tr>
+            <tr>
+                <td><code>enableCamera</code></td>
+                <td>1</td>
+                <td>Jika diatur ke <code>0</code>, fitur siaran kamera akan dinonaktifkan.</td>
+            </tr>
+            <tr>
+                <td><code>enableMic</code></td>
+                <td>1</td>
+                <td>Jika diatur ke <code>0</code>, fitur siaran mikrofon akan dinonaktifkan.</td>
+            </tr>
+            <tr>
+                <td><code>enableScreen</code></td>
+                <td>1</td>
+                <td>Jika diatur ke <code>0</code>, fitur berbagi layar akan dinonaktifkan.</td>
+            </tr>
+        </table>
+
+        <hr>
+        <div style="text-align: center;">
+            <a href="id.html" class="download-btn">▼ Kembali ke Situs Web Resmi ▼</a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <title>chat.exe - এম্বেড গাইড</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+<div class="lang-switch" dir="ltr">
+    [ <a href="embed.html">日本語</a> | <a href="embed_en.html">English</a> | <a href="embed_zh-cn.html">简体中文</a> | <a href="embed_zh-tw.html">繁體中文</a> | <a href="embed_ko.html">한국어</a> | <a href="embed_de.html">Deutsch</a> | <a href="embed_fr.html">Français</a> | <a href="embed_es.html">Español</a> | <a href="embed_pt.html">Português</a> | <a href="embed_ru.html">Русский</a> | <a href="embed_it.html">Italiano</a> | <a href="embed_pl.html">Polski</a> | <a href="embed_nl.html">Nederlands</a> | <a href="embed_ar.html">العربية</a> | <a href="embed_th.html">ภาษาไทย</a> | <a href="embed_hi.html">हिन्दी</a> | <a href="embed_bn.html">বাংলা</a> | <a href="embed_id.html">Bahasa Indonesia</a> ]
+</div>
+
+<div class="container">
+    <div class="window-title">
+        <span>chat.exe - এম্বেড ওয়েবসাইট (iframe)</span>
+        <div class="title-bar-controls">
+            <button aria-label="Minimize"></button>
+            <button aria-label="Maximize"></button>
+            <button aria-label="Close"></button>
+        </div>
+    </div>
+    
+    <div class="content">
+        <h1>আপনার ওয়েবসাইটে chat.exe যোগ করুন!</h1>
+        
+        <p>chat.exe এর ওয়েব সংস্করণ সহজেই <code>iframe</code> ট্যাগ ব্যবহার করে আপনার ওয়েবসাইট বা ব্লগে এম্বেড করা যেতে পারে।<br>
+        কেন আপনার দর্শনার্থীদের জন্য একটি রেট্রো চ্যাট রুম মিলনের স্থান হিসাবে সেট আপ করবেন না?</p>
+
+        <h2>■ বেসিক এম্বেড কোড</h2>
+        <p>চ্যাট রুম প্রদর্শন করতে আপনার ওয়েবসাইটের যেকোনো জায়গায় নিচের HTML কোডটি কপি এবং পেস্ট করুন।</p>
+        <pre style="background: #e0e0e0; padding: 10px; border: 1px solid #808080; overflow-x: auto;">
+&lt;iframe 
+  src="https://app.chatexe.net/?room=MySiteRoom&amp;showFrame=0&amp;lang=bn" 
+  width="100%" 
+  height="500" 
+  frameborder="0"
+  allow="microphone; camera; display-capture"
+&gt;&lt;/iframe&gt;
+        </pre>
+        <p>* <code>allow="microphone; camera; display-capture"</code> উল্লেখ করা iframe এর মধ্যে ভয়েস/ভিডিও কল এবং স্ক্রিন শেয়ারিং সক্ষম করে।</p>
+
+        <h2>■ URL প্যারামিটার তালিকা</h2>
+        <p>আপনি <code>src</code> অ্যাট্রিবিউটে URL এ প্যারামিটার যোগ করে চ্যাটের আচরণ কাস্টমাইজ করতে পারেন <code>?parameter=value</code> ফরম্যাটে। <code>&amp;</code> দিয়ে একাধিক প্যারামিটার যুক্ত করুন।</p>
+        
+        <table class="layout" border="1" style="border-collapse: collapse; width: 100%; border-color: #c0c0c0;">
+            <tr style="background: #000080; color: #fff;">
+                <th>প্যারামিটার</th>
+                <th>ডিফল্ট</th>
+                <th>বিবরণ</th>
+            </tr>
+            <tr>
+                <td><code>room</code></td>
+                <td>Lobby</td>
+                <td>প্রাথমিক রুমের নাম উল্লেখ করুন (উদা. <code>room=MySiteRoom</code>)</td>
+            </tr>
+            <tr>
+                <td><code>private</code></td>
+                <td>0</td>
+                <td>যদি <code>1</code> সেট করা হয়, রুমটি "পাবলিক রুম লিস্টে" প্রদর্শিত হবে না, এটি একটি ব্যক্তিগত রুম করে তোলে যা শুধুমাত্র রুমের নাম জানে এমন ব্যক্তিদের জন্য অ্যাক্সেসযোগ্য।</td>
+            </tr>
+            <tr>
+                <td><code>showFrame</code></td>
+                <td>1</td>
+                <td>যদি <code>0</code> সেট করা হয়, বাইরের উইন্ডো ফ্রেমটি লুকানো হবে, যার ফলে চ্যাটটি আপনার ওয়েবসাইটের ডিজাইনে নির্বিঘ্নে মিশে যাবে। এম্বেড করার সময় প্রস্তাবিত।</td>
+            </tr>
+            <tr>
+                <td><code>lang</code></td>
+                <td>ja</td>
+                <td>প্রদর্শন ভাষা উল্লেখ করুন (উদা. <code>ja, en, zh-cn, zh-tw, ko, de, fr, es, pt, ru, it, pl, nl, ar, th, hi, bn, id</code>)</td>
+            </tr>
+            <tr>
+                <td><code>showUsers</code></td>
+                <td>1</td>
+                <td>যদি <code>0</code> সেট করা হয়, ডানদিকের ব্যবহারকারী তালিকার প্যানেলটি লুকানো হবে।</td>
+            </tr>
+            <tr>
+                <td><code>showMoveRoom</code></td>
+                <td>1</td>
+                <td>যদি <code>0</code> সেট করা হয়, "রুম পরিবর্তন করুন" বোতামটি লুকানো হবে, যা ব্যবহারকারীদের নির্দিষ্ট রুমে লক করে রাখবে।</td>
+            </tr>
+            <tr>
+                <td><code>enableCamera</code></td>
+                <td>1</td>
+                <td>যদি <code>0</code> সেট করা হয়, ক্যামেরা সম্প্রচার বৈশিষ্ট্য অক্ষম হবে।</td>
+            </tr>
+            <tr>
+                <td><code>enableMic</code></td>
+                <td>1</td>
+                <td>যদি <code>0</code> সেট করা হয়, মাইক্রোফোন সম্প্রচার বৈশিষ্ট্য অক্ষম হবে।</td>
+            </tr>
+            <tr>
+                <td><code>enableScreen</code></td>
+                <td>1</td>
+                <td>যদি <code>0</code> সেট করা হয়, স্ক্রিন শেয়ারিং বৈশিষ্ট্য অক্ষম হবে।</td>
+            </tr>
+        </table>
+
+        <hr>
+        <div style="text-align: center;">
+            <a href="bn.html" class="download-btn">▼ অফিসিয়াল ওয়েবসাইটে ফিরে যান ▼</a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
